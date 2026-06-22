@@ -1,0 +1,88 @@
+.menu {
+  padding: 90px 0;
+  background:
+    linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+}
+
+.menu__head {
+  max-width: 620px;
+  margin-bottom: 50px;
+}
+.menu__title {
+  font-size: clamp(2.1rem, 4.2vw, 3.1rem);
+  color: var(--cobalt);
+  margin-top: 14px;
+}
+.menu__title-accent { color: var(--bermellon); font-style: italic; font-weight: 500; }
+.menu__sub {
+  margin-top: 16px;
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+}
+
+/* Grid asimétrico: el primer plato (café) ocupa 2 columnas */
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.dish {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dish:hover { transform: translateY(-5px); box-shadow: var(--shadow-soft); }
+
+.dish--feature { grid-column: span 2; }
+.dish--feature .dish__photo { aspect-ratio: 16 / 9; }
+
+.dish__photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.dish__photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.dish:hover .dish__photo img { transform: scale(1.06); }
+
+.dish__cat {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: rgba(10, 42, 110, 0.92);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 100px;
+}
+
+.dish__body { padding: 20px 22px 24px; }
+.dish__name {
+  font-size: 1.4rem;
+  color: var(--cobalt);
+  margin-bottom: 7px;
+}
+.dish__desc {
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+}
+
+@media (max-width: 860px) {
+  .menu__grid { grid-template-columns: repeat(2, 1fr); }
+  .dish--feature { grid-column: span 2; }
+  .menu { padding: 70px 0; }
+}
+@media (max-width: 540px) {
+  .menu__grid { grid-template-columns: 1fr; }
+  .dish--feature { grid-column: span 1; }
+}

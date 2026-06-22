@@ -1,0 +1,103 @@
+.loc {
+  padding: 90px 0;
+  background: var(--cream);
+}
+
+.loc__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+.loc__title {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  color: var(--cobalt);
+  margin-top: 14px;
+}
+
+.loc__rows {
+  margin-top: 30px;
+  display: grid;
+  gap: 14px;
+}
+.loc__row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--white);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.18s ease;
+}
+.loc__row:hover { transform: translateX(4px); }
+.loc__row strong { color: var(--cobalt); font-size: 1.05rem; }
+.loc__ic {
+  display: inline-flex;
+  width: 44px; height: 44px;
+  align-items: center; justify-content: center;
+  border-radius: 12px;
+  background: rgba(214,40,40,0.1);
+  color: var(--bermellon);
+  flex-shrink: 0;
+}
+
+/* --- Aviso de apertura --- */
+.loc__notify {
+  margin-top: 28px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  border-top: 4px solid var(--bermellon);
+}
+.loc__notify-title { font-size: 1.4rem; color: var(--cobalt); }
+.loc__notify-sub { margin-top: 6px; color: var(--ink-soft); }
+
+.loc__form { margin-top: 18px; display: grid; gap: 10px; }
+.loc__form input {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(20,33,61,0.15);
+  font-family: inherit;
+  font-size: 0.98rem;
+  color: var(--ink);
+  background: var(--cream);
+  transition: border 0.18s ease;
+}
+.loc__form input:focus { outline: none; border-color: var(--cobalt); }
+.loc__form-send { display: flex; gap: 10px; }
+.loc__form-send input { flex: 1; }
+.loc__form-send .btn { flex-shrink: 0; }
+
+.loc__msg { font-size: 0.9rem; font-weight: 600; margin-top: 2px; }
+.loc__msg--ok { color: #1a7a3c; }
+.loc__msg--error { color: var(--bermellon-deep); }
+
+/* --- Mapa --- */
+.loc__map {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  min-height: 460px;
+  border: 6px solid var(--white);
+}
+.loc__map iframe {
+  width: 100%; height: 100%;
+  min-height: 460px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .loc__grid { grid-template-columns: 1fr; }
+  .loc__map { min-height: 340px; order: -1; }
+  .loc__map iframe { min-height: 340px; }
+  .loc { padding: 70px 0; }
+}
+@media (max-width: 480px) {
+  .loc__form-send { flex-direction: column; }
+  .loc__form-send .btn { justify-content: center; }
+}
