@@ -99,3 +99,104 @@ export const MENU = [
     cat: 'Bebidas',
   },
 ]
+
+
+// =========================================================
+//  MENÚ COMPLETO CON PRECIOS
+//  Fuente: menú oficial (flyer de precios). Precios en USD.
+//  Editar aquí actualiza toda la web.
+// =========================================================
+
+export const MENU_FULL = [
+  {
+    key: 'comida',
+    title: 'Comida',
+    items: [
+      {
+        name: 'Pan con cerdo asado',
+        desc: 'Pan cubano crujiente relleno de cerdo asado, cebolla salteada y nuestro toque especial.',
+        price: '10.99',
+      },
+      {
+        name: 'Sándwich cubano',
+        desc: 'El clásico de siempre: jamón, cerdo asado, queso suizo, pepinos encurtidos y mostaza en pan cubano.',
+        price: '10.99',
+      },
+      {
+        name: 'Pizza de queso',
+        desc: 'Nuestra pizza tradicional cubana con salsa de tomate y abundante queso mozzarella.',
+        price: '9.99',
+      },
+      {
+        name: 'Pizza especial de la casa',
+        desc: 'Salsa de tomate, queso mozzarella, cerdo asado, cebolla y pimientos.',
+        price: '13.99',
+        featured: true,
+      },
+    ],
+  },
+  {
+    key: 'batidos',
+    title: 'Batidos y bebidas frescas',
+    items: [
+      {
+        name: 'Batidos cubanos',
+        desc: 'Diferentes sabores: mamey, mango o guayaba.',
+        price: '5.99',
+      },
+      {
+        name: 'Guarapo frío',
+        desc: 'Jugo de caña natural, servido bien frío.',
+        price: '4.00',
+      },
+      {
+        name: 'Café cubano',
+        desc: 'Colado fuerte y dulce, como debe ser.',
+        price: '1.50',
+      },
+    ],
+  },
+  {
+    key: 'bebidas',
+    title: 'Refrescos y agua',
+    items: [
+      {
+        name: 'Refresco de lata (tradicional)',
+        desc: 'Coca-Cola y otros clásicos.',
+        price: '1.50',
+      },
+      {
+        name: 'Refrescos importados de Cuba',
+        desc: 'Tropical, Inca Kola y más sabores importados.',
+        price: '1.50',
+      },
+      {
+        name: 'Agua',
+        desc: 'Botella de agua.',
+        price: '1.00',
+      },
+    ],
+  },
+]
+
+// Ingredientes extra para la pizza
+export const PIZZA_ADDONS = {
+  price: '1.99',
+  unit: 'c/u',
+  label: 'Agregados a la pizza',
+  note: 'Cualquier ingrediente adicional',
+  items: [
+    'Jamón', 'Pepperoni', 'Cerdo asado', 'Pollo',
+    'Pimiento', 'Cebolla', 'Champiñones', 'Piña', 'Aceitunas',
+  ],
+}
+
+// Promociones de apertura
+export const PROMOS = {
+  title: 'Promociones de apertura',
+  items: [
+    { name: '2 pizzas de queso', price: '18.99' },
+    { name: 'Sándwich cubano + refresco de lata', price: '11.99' },
+    { name: 'Pizza especial de la casa + 2 refrescos de lata', price: '16.99' },
+  ],
+}
