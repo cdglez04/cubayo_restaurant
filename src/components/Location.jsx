@@ -37,7 +37,7 @@ export default function Location() {
     <section className="loc" id="ubicacion">
       <div className="container loc__grid">
         <div className="loc__info">
-          <span className="eyebrow">Visítanos pronto</span>
+          <span className="eyebrow">RECIEN ABIERTOS</span>
           <h2 className="loc__title">Aquí nos vas a encontrar</h2>
 
           <div className="loc__rows">
@@ -54,39 +54,6 @@ export default function Location() {
             </a>
           </div>
 
-          <div className="loc__notify">
-            <h3 className="loc__notify-title">Te avisamos cuando abramos</h3>
-            <p className="loc__notify-sub">Déjanos tu correo y sé de los primeros en probar.</p>
-            <div className="loc__form">
-              <input
-                type="text"
-                placeholder="Tu nombre (opcional)"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                aria-label="Tu nombre"
-              />
-              <div className="loc__form-send">
-                <input
-                  type="email"
-                  placeholder="tucorreo@ejemplo.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && submit()}
-                  aria-label="Tu correo"
-                />
-                <button
-                  className="btn btn-primary"
-                  onClick={submit}
-                  disabled={state === 'loading'}
-                >
-                  {state === 'loading' ? 'Enviando…' : 'Avísame'}
-                </button>
-              </div>
-              {msg && (
-                <p className={`loc__msg loc__msg--${state}`}>{msg}</p>
-              )}
-            </div>
-          </div>
         </div>
 
         <div className="loc__map">

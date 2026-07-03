@@ -27,7 +27,6 @@ export default function Footer() {
         <div className="ft__col">
           <h4>Contacto</h4>
           <a href={`tel:${BUSINESS.phone}`}>{BUSINESS.phoneDisplay}</a>
-          <span>¡Pronto abrimos!</span>
         </div>
 
         <div className="ft__col">

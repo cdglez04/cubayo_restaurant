@@ -30,8 +30,8 @@ export const BUSINESS = {
   // Redes (tal como aparecen en el material oficial)
   social: {
     facebook: { label: 'Cuba Yo Cuba Yo', url: 'https://facebook.com/' },
-    instagram: { label: '@cuba.yo2026', url: 'https://instagram.com/cuba.yo2026' },
-    tiktok: { label: 'Cuba Yo 2026', url: 'https://tiktok.com/@cubayo2026' },
+    instagram: { label: '@cuba.yo2026', url: 'https://www.instagram.com/cuba.yo2026?igsh=MTU1OTQxMDg5MnByZw==' },
+    tiktok: { label: 'Cuba Yo 2026', url: 'https://www.tiktok.com/@cuba.yo.2026?_r=1&_t=ZP-97idRnCjXTS' },
   },
 }
 

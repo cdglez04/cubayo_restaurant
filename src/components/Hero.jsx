@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="hero__copy">
           <span className="hero__badge">
             <span className="hero__badge-dot" />
-            Pronto abrimos en Porter, TX
+            Ya abrimos, ven a conocernos.
           </span>
 
           <h1 className="hero__title">
