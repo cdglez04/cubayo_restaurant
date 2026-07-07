@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { BUSINESS } from '../config/business'
 import logo from '../assets/logo-cubayo.png'
 import './Navbar.css'
+import { Link } from "react-router-dom"
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -14,9 +16,10 @@ export default function Navbar() {
   }, [])
 
   const links = [
-    { href: '#menu', label: 'Menú' },
-    { href: '#historia', label: 'Nosotros' },
-    { href: '#ubicacion', label: 'Ubicación' },
+    { href: '/#menu', label: 'Menú' },
+    { href: '/#historia', label: 'Nosotros' },
+    { to: '/events', label: 'Eventos', route: true },
+    { href: '/#ubicacion', label: 'Ubicación' },
   ]
 
   return (
@@ -29,16 +32,22 @@ export default function Navbar() {
           </span>
         </a>
 
-        <nav className={`nav__links ${open ? 'is-open' : ''}`}>
-          {links.map((l) => (
+       <nav className={`nav__links ${open ? 'is-open' : ''}`}>
+        {links.map((l) =>
+          l.route ? (
+            <Link key={l.to} to={l.to} onClick={() => setOpen(false)}>
+              {l.label}
+            </Link>
+          ) : (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
               {l.label}
             </a>
-          ))}
-          <a className="btn btn-primary nav__cta" href={`tel:${BUSINESS.phone}`}>
-            Llamar {BUSINESS.phoneDisplay}
-          </a>
-        </nav>
+          )
+        )}
+        <a className="btn btn-primary nav__cta" href={`tel:${BUSINESS.phone}`}>
+          Llamar {BUSINESS.phoneDisplay}
+        </a>
+      </nav>
 
         <button
           className="nav__burger"

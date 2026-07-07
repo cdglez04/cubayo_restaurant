@@ -191,6 +191,34 @@ export const PIZZA_ADDONS = {
   ],
 }
 
+// =========================================================
+//  EVENTOS
+//  Eventos del negocio (inauguración, celebraciones, etc).
+//  Cada evento trae sus fotos; añadir un evento nuevo es
+//  agregar un objeto más a este array.
+// =========================================================
+
+export const EVENTS = [
+  {
+    key: 'inauguracion',
+    title: 'Gran Inauguración',
+    date: '2026-07-03',
+    dateDisplay: '3 de julio, 2026',
+    location: '24151 US 59, Suite 205, Porter, TX',
+    summary:
+      'Abrimos las puertas de Cuba Yo con música, comida recién hecha y mucha ' +
+      'familia. Así vivimos el primer día.',
+    photos: [
+      { img: 'evento-inauguracion-1', alt: 'Fachada de Cuba Yo el día de la inauguración, con el letrero iluminado y todo el equipo reunido', featured: true },
+      { img: 'evento-inauguracion-2', alt: 'Grupo celebrando con confeti frente a la entrada de Cuba Yo' },
+      { img: 'evento-inauguracion-3', alt: 'Corte de cinta en la inauguración oficial de Cuba Yo' },
+      { img: 'evento-inauguracion-4', alt: 'Familia con abuelos y la niña brindando frente al backdrop de Cuba Yo' },
+      { img: 'evento-inauguracion-5', alt: 'Familia saliendo de Cuba Yo el día de la inauguración, con globos en la entrada' },
+      { img: 'evento-inauguracion-6', alt: 'Backdrop de marca "Cuba Yo, puro sabor cubano" con la dueña luciendo un vestido inspirado en la bandera cubana' },
+    ],
+  },
+]
+
 // Promociones de apertura
 export const PROMOS = {
   title: 'Promociones de apertura',
